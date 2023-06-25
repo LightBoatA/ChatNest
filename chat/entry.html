@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container {
+            height: 600px;
+            display: grid;
+            /* border: 1px solid #ff9933; */
+            place-items: center;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 50px;
+        }
+        .user {
+            padding: 0 10px;
+            border: 1px solid black;
+            /* height: 100%; */
+            height: 50px;
+            /* border-radius: 10px; */
+        }
+        /* 外面包裹一层 */
+        .file-input {
+            position: relative;
+            /* display: inline-block; */
+            align-self: center;
+            cursor: pointer;
+            background-color: #ffa118;
+        }
+        /* 真正的选择文件隐藏起来 */
+        .file-input input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-input label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 1px solid black;
+            /* background-color: #ccc; */
+            /* color: #fff; */
+            cursor: pointer;
+        }
+        #image-input {
+            height: 50px;
+            /* border: 1px solid #ff9933 */
+        }
+        #photo {
+            width: 100px;
+            height: 100px;
+            align-self: center;
+            border-radius: 25px;
+        }
+        .login-btn {
+            /* height: 100%; */
+            height: 50px;
+            background: #ffa118;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="text" class="user" placeholder="昵称">
+            <!-- <input type="file" id="image-input"> -->
+            <img src="./img/示例头像.png" alt="" id="photo">
+            <div class="file-input">
+                <input type="file" id="image-input" accept="image/*">
+                <label for="file">上传头像</label>
+            </div>
+            <button class="login-btn">进入聊天室</button>
+            <!-- <button class="upload-btn">上传头像</button> -->
+        </div>
+    </div>
+    <script src="./js/entry.js"></script>
+</body>
+</html>

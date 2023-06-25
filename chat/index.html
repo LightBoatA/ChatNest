@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 600px;
+            width: 100%;
+            /* background-color: yellow; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box {
+            height: 400px;
+            width: 50%;
+            padding: 20px;
+            /* border: 1px solid red; */
+            /* background-color: gray; */
+            /* display: flex; */
+        }
+        #list {
+            margin: 0;
+            height: 80%;
+            /* width: 100%; */
+            border: 1px solid black;
+            /* background-color: #282c34; */
+            margin-bottom: 20px;
+            padding: 20px;
+            /* border-radius: 30px; */
+            list-style: none;
+            overflow: auto;
+        }
+
+        #ipt {
+            height: 15%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: stretch;
+        }
+        #ipt input{
+            flex:1;
+        }
+        #ipt button {
+            width: 100px;
+        }
+        .chat-bubble {
+            display: inline-block;
+            /* max-width: 70%;  */
+            margin: 0;
+            /* margin-bottom: 10px; */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #eaeaea;
+        }
+        .username {
+            font-size: 10px;
+        }
+        #list li {
+            display: flex;
+            align-items: flex-start;
+        }
+        .photo {
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+            margin-right: 10px;
+
+            /* background-color: gray; */
+        }
+        .name {
+            font-weight: 700;
+        }
+        .content {
+            /* float: left; */
+        }
+        /* 输入框 */
+        #input {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box">
+            <ul id="list">
+                <!-- <li class="msg-container">
+                    <div class="photo"></div>
+                    <div class="content">
+                        <p class="username">
+                            <span>北国</span>
+                            <span>2023-06-19 19:51:51</span>
+                        </p>
+                        <p class="chat-bubble">你优冰啊</p>
+                    </div>
+
+                </li> -->
+            </ul>
+            <div id="ipt">
+                <input type="text" name="" id="input">
+                <button id="send">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
